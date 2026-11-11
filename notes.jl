@@ -23,9 +23,4 @@ a = (rₘᵢₙ + rₘₐₓ)/2 #   the semi-major axis a
 v^2 = GM🜨*(2/r - 1/a) # the vis-viva law. equivalent to energy law
 v = sqrt(GM🜨/a) # circular orbit
 T = 2*π/v       # period of circular orbit
-Mean radius
-	6371.0 km[6]
-Equatorial radius
-	6378.137 km[7][8]
-Polar radius
-	6356.752 km[9]
+

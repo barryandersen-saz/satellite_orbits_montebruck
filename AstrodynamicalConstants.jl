@@ -3,7 +3,7 @@ module AstrodynamicalConstants
 include("SI.jl"); using .SI
 
 export c, G, AU
-export GM🜨, M🜨, J2, R🜨e, R🜨p, R🜨, 𝓯, ω🜨, a🜨
+export GM🜨, M🜨, J2, R🜨e, R🜨p, R🜨, 𝓯, ω🜨, a🜨, dySid
 export GM☉, AU, R☉, P☉
 export GM☽, a☽, R☽
 
@@ -24,12 +24,17 @@ AU  = 149597870.691*km            #DE405 (Standish 1998)
 GM🜨 = 398600.4415*km^3/s^2       #JGM-3
 M🜨 = GM🜨/G
 J2  = 0.00108263                  #JGM-3
-R🜨e = 6378.137*km            # equatorial radius of Earth WGS-84
-R🜨p = 6356.752*km             # polar radius of Earth
-R🜨  = 6371.001*km    # Volumetric mean radius,  cbrt(R🜨e^2 * R🜨p)
+R🜨 = 6378.137*km            # equatorial radius of Earth WGS-84
+###
+#R🜨e = 6378.137*km            # equatorial radius of Earth WGS-84
+#R🜨p = 6356.752*km             # polar radius of Earth
+#R🜨  = 6371.001*km    # Volumetric mean radius,  cbrt(R🜨e^2 * R🜨p)
+###
 𝓯   = 1/298.257223563         #WGS-84 (NIMA 1997)
-ω🜨  = 0.7292115e-4*rad/s       #Moritz 1980
+ω🜨  = 7.2921157e-4*rad/s       
 a🜨  = 149598261*km         #  semimajor axis of the Earth's orbit
+dySid = 23.93447*hr       # sidereal day on Earth
+
 
 #SUN
 GM☉  = 1.32712440018e11*km^3/s^2  #DE405 (Standish 1998)
